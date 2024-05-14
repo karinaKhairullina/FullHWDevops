@@ -1,0 +1,79 @@
+{% load static %}
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Skill-Check</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <a href="{% url 'main_page' %}"><img id="logo" src="{% static 'images/logo1.png' %}" alt="logo"></a>
+    </header>
+    <nav>
+        <ul class="top-menu">
+            <li class="active">MENU</li>
+            <li><a href="{% url 'main_page' %}">HOME</a></li>
+            <li><a href="{% url 'help_page' %}">HELP</a></li>
+            <li><a href="{% url 'tests_page' %}">TEST`S</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="/">PROFILE</a></li>
+            <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">LOGIN</a></li>
+            <li><a href="{% url 'register' %}">REGISTER</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <br/>
+    <br/>
+    <br/>
+    <aside>
+        <nav>
+            <ul class="aside-menu">
+                <li class="active"><font face="Cinzel" size="3">Link`s on ours Test`s</font></li>
+                <li><font face="Cinzel" size="3"><a href="{% url 'tests_by_level' level=1 %}">A LEVEL TEST</a></font>
+                </li>
+                <li><font face="Cinzel" size="3"><a href="{% url 'tests_by_level' level=2 %}">B LEVEL TEST</a></font>
+                </li>
+                <li><font face="Cinzel" size="3"><a href="{% url 'tests_by_level' level=3 %}">C LEVEL TEST</a></font>
+                </li>
+            </ul>
+        </nav>
+        {% block content_aside %}
+        {% endblock %}
+
+        {% block content_aside_photos %}
+        {% endblock %}
+    </aside>
+
+    {% block content %}
+    {% endblock %}
+</div>
+
+<footer>
+    <div id="footer">
+        <div id="twitter">
+            <h3>DISCLAIMER</h3>
+            <p><font face="Cinzel" color="white" size="3">This site was specially designed to gain experience in web
+                programming. Summer Practice 2022 KFU ITIS</font></p>
+        </div>
+        <div id="social">
+            <h3>SOCIAL NETWORK`S</h3>
+            <a href="https://vk.com/fantacyfanatic"><img src="{% static 'images/vk.png' %}" alt=" ">Artoym</a>
+            <a href="https://vk.com/id313094917"><img src="{% static 'images/vk.png' %}" alt=" ">Ilshat</a>
+            <a href="https://vk.com/ikutin99"><img src="{% static 'images/vk.png' %}" alt=" ">Ivan</a>
+        </div>
+        <div id="footer-logo">
+            <img src="{% static 'images/logo2t.jpg' %}" alt="logo">
+        </div>
+    </div>
+</footer>
+
+</body>

@@ -1,0 +1,52 @@
+{% extends 'testenglish/base.html' %}
+{% load static %}
+
+{% block content_aside_photos %}
+<h2>PHOTOS OF HELP</h2>
+<p>
+    <img src="{% static 'images/help1.jpg' %}" width="230" height="180" alt="Our offices">
+</p>
+<br/>
+<p>
+    <img src="{% static 'images/help2.jpg' %}" width="230" height="180" alt="Our offices">
+</p>
+{% endblock %}
+
+{% block content %}
+<section>
+    <blockquote>
+        <font face="Cinzel" color="#ffffff" size="6">Useful information</font>
+    </blockquote>
+
+    <p><font face="Cinzel" color="" size="4">The site in the upper left corner says which page you are on.
+        To navigate through the site, use the navigation buttons in the top pinned menu.
+        To start taking tests of various levels, click on the corresponding button in the side menu on the left.
+        To determine your level, you need to pass the "Yourself" test, which is located on the HOME home page
+        After passing the test, you will be asked to save the result, for this you will need to register on our
+        website and log in.
+        There are special sections for this, such as: LOGIN AND REGISTER</font></p>
+    <p><font face="Cinzel" color="" size="4">The questions are based on the school-preschool program
+        For each question, you need to choose 1 answer option.
+        Also below will be listed sites with useful information that will help you in the learning process.
+    </font></p>
+    <p><font face="Cinzel" color="" size="4">If you have any questions or technical problems with the site, contact
+        one of the employees.
+        Their contacts are listed at the bottom on all pages of the site.</font></p>
+
+
+    <figure>
+        <img src="{% static 'images/helpt.jpg' %}" width="675" height="300" alt="">
+    </figure>
+
+    <h2>Useful links</h2>
+    <ul>
+        <li><font face="Cinzel" color="#5CCCCC" size="5"><a
+                href="https://puzzle-english.com">Puzzle-english</a></font></li>
+        <li><font face="Cinzel" color="#5CCCCC" size="5"><a
+                href="https://ru.duolingo.com">Duolingo-english</a></font></li>
+        <li><font face="Cinzel" color="#5CCCCC" size="5"><a
+                href="https://skysmart.ru/articles/english/sajty-dlya-samostoyatelnogo-izucheniya-anglijskogo">Skysmart-english</a></font>
+        </li>
+    </ul>
+</section>
+{% endblock %}

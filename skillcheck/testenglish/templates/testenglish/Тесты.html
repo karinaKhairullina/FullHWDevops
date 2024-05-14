@@ -1,0 +1,95 @@
+{% extends 'testenglish/base.html' %}
+{% load static %}
+
+{% block content_aside_photos %}
+<h2>LEARN ENGLISH NOW</h2>
+<p>
+    <img src="{% static 'images/eng.jpg' %}" width="230" height="180" alt="Our offices">
+</p>
+{% endblock %}
+
+{% block content %}
+<section>
+    <blockquote>
+        <p>
+            <font face="Cinzel" size="6">
+                &ldquo;The boundaries of my language are the boundaries of my world&rdquo;
+            </font>
+        </p>
+        <cite>Maybe Seer</cite>
+    </blockquote>
+
+    <p>
+        <font face="Cinzel" color="" size="5">
+            Why do I need to learn English? Not just for the sake of a business career. If you dream of becoming a
+            cool scientist, a medical professional or a highly qualified specialist, you just need to learn English.
+        </font>
+    </p>
+    <p>
+        <font face="Cinzel" color="" size="5">
+            Knowledge of a foreign language really gives a significant advantage when looking for a job. Such
+            specialists can claim a large salary from the start. And many international and IT companies do not even
+            consider applicants who cannot speak English fluently.
+        </font>
+    </p>
+    <p>
+        <font face="Cinzel" color="" size="5">
+            One of the reasons to learn English is the opportunity to watch movies and read books in the original.
+        </font>
+    </p>
+    <p>
+        <font face="Cinzel" color="" size="5">
+            Our tests will help you find out your level of English, as well as improve it below are 3 tests for each
+            level.
+        </font>
+    </p>
+
+    <figure>
+        <img src="{% static 'images/testpic.jpg' %}" width="320" height="175" alt="">
+        <div>
+            <nav>
+                <ul class="button-test1">
+                    <li><a href="{% url 'tests_by_level' level=1 %}"><font face="Cinzel" color="#5CCCCC" size="4">Test A
+                        Start</font></a></li>
+                </ul>
+            </nav>
+        </div>
+    </figure>
+    <figure>
+        <img src="{% static 'images/testpic.jpg' %}" width="320" height="175" alt="">
+        <div>
+            <nav>
+                <ul class="button-test1">
+                    <li><a href="{% url 'tests_by_level' level=2 %}"><font face="Cinzel" color="#5CCCCC" size="4">Test B
+                        Start</font></a></li>
+                </ul>
+            </nav>
+        </div>
+    </figure>
+    <br/>
+    <br/>
+    <br/>
+    <figure id="picture">
+        <img src="{% static 'images/testpic.jpg' %}" width="320" height="175" alt="">
+        <div>
+            <nav>
+                <ul class="button-test1">
+                    <li><a href="{% url 'tests_by_level' level=3 %}"><font face="Cinzel" color="#5CCCCC" size="4">Test C
+                        Start</font></a></li>
+                </ul>
+            </nav>
+        </div>
+    </figure>
+
+
+    <h2>About Test</h2>
+    <div>
+        <ul>
+            <li><font face="Cinzel" color="#4962D6" size="4">A — Basic Knowledge (Basic User)</font></li>
+            <li><font face="Cinzel" color="#4962D6" size="4">B — Independent ownership (Independent User)</font>
+            </li>
+            <li><font face="Cinzel" color="#4962D6" size="4">C — Fluency (Proficient User)</font></li>
+        </ul>
+    </div>
+</section>
+{% endblock %}

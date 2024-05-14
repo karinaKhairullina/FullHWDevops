@@ -1,0 +1,14 @@
+{% extends 'testenglish/base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <blockquote>
+        <font face="Cinzel" color="#ffffff" size="6">{{result}}</font>
+    </blockquote>
+    <br/>
+    <div>
+        <img src="{% static 'images/gif.gif' %}" alt="12" width="680" height="400">
+    </div>
+</section>
+{% endblock %}

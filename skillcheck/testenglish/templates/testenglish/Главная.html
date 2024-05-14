@@ -1,0 +1,110 @@
+{% extends 'testenglish/base.html' %}
+{% load static %}
+
+{% block content_aside %}
+    <h2>PHOTOS OF ENGLISH</h2>
+    <p>
+        <img src="{% static 'images/aside1.jpg' %}" width="230" height="180" alt="Our offices">
+    </p>
+    <br/>
+    <p>
+        <img src="{% static 'images/aside2.jpg' %}" width="230" height="180" alt="Our offices">
+    </p>
+    <br/>
+    <p>
+        <img src="{% static 'images/aside3.jpg' %}" width="230" height="180" alt="Our offices">
+    </p>
+{% endblock %}
+
+{% block content %}
+<section>
+    <blockquote>
+        <p>
+            <font face="Cinzel" color="" size="6">
+                "If you talk to a man in a language he understands, that goes to his head. If you talk to him in his
+                own
+                language, that goes to his heart"
+            </font>
+        </p>
+        <br/>
+        <cite>Nelson Mandela</cite>
+    </blockquote>
+
+    <p>
+        <font face="Cinzel" color="" size="4">
+            We all know that English is the most popular language in the world. It is spoken by almost every sixth
+            inhabitant of the planet Earth. In many countries, English is considered the second language after the
+            national language.
+
+            English is the main language of world communication, the language of international trade, tourism,
+            politics,
+            the Internet and more.
+
+            If you want to travel around the globe without any problems, then you need to be able to talk to people
+            from
+            any country. But, even if you are not going abroad, knowing English is very useful.
+
+            You will be able to read an article, a book or a review of a film in the original language, learn the
+            culture of another country or understand what is sung in your favorite song.
+        </font>
+    </p>
+    <p>
+        <font face="Cinzel" color="" size="4">
+            On our website "Skill-Check" you will be able to take tests of different levels, and you will also find
+            links
+            to articles with useful information about learning English, audio and video in English, you will also be
+            able to download the books you are interested in in English.
+
+            We hope that regardless of the purpose for which you started learning English, the information received
+            on
+            our website will make learning it convenient and easy.
+        </font>
+    </p>
+    <p>
+        <font face="Cinzel" color="" size="4">
+            On our website you can take tests of different levels.Before proceeding with their implementation, it is
+            advisable to pass a "Test yourself" To determine the language level.
+        </font>
+    </p>
+
+
+    <figure>
+        <img src="{% static 'images/your1.jpg' %}" width="320" height="175" alt="">
+    </figure>
+    <figure>
+        <img src="{% static 'images/your2.jpg' %}" width="320" height="175" alt="">
+    </figure>
+
+    <div>
+        <br>
+        <nav>
+            <ul class="button-test">
+                <li><font face="Cinzel" color="" size="4"><a href="{% url 'test_yourself' %}">Test
+                    Yourself</a></font></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h2>OUR TEAM</h2>
+    <div class="team-row">
+        <figure>
+            <img src="{% static 'images/lead.jpg' %}" width="192" height="192" alt="">
+            <figcaption><font face="Cinzel" size="4">Artoym</font><span><font face="Cinzel"
+                                                                              size="4">Team Leader</font></span>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="{% static 'images/ivan.jpg' %}" width="192" height="192" alt="">
+            <figcaption><font face="Cinzel" size="4">Ivan</font><span><font face="Cinzel"
+                                                                            size="4">Middle developer</font></span>
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="{% static 'images/jon.jpg' %}" width="192" height="192" alt="">
+            <figcaption><font face="Cinzel" size="4">Ilshat</font><span><font face="Cinzel"
+                                                                              size="4">Senior developer</font></span>
+            </figcaption>
+        </figure>
+    </div>
+</section>
+{% endblock %}

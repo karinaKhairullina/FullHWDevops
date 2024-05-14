@@ -1,0 +1,36 @@
+{% extends 'testenglish/base.html' %}
+{% load static %}
+
+{% block content_aside_photos %}
+<h2>REGISTER YOUR ACCOUNT</h2>
+<p>
+    <img src="{% static 'images/morf.jpg' %}" width="230" height="180" alt="Our offices">
+</p>
+{% endblock %}
+
+{% block content %}
+<section>
+    <blockquote>
+        <font face="Cinzel" color="#ffffff" size="6">Registration</font>
+    </blockquote>
+    <br/>
+    <br/>
+    <div>
+        <nav>
+            <ul class="join-text-r">
+                <li><font face="Cinzel" color="#3F92D2" size="4">Create your Skill-Check account!</font></li>
+            </ul>
+            <form action="{% url 'register' %}" method="post" style="color: #1b1b1b">
+
+                {% for f in form %}
+                <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+                <div class="form-error">{{ f.errors }}</div>
+                {% endfor %}
+
+                {% csrf_token %}
+                <button type="submit" class="input-button-register" >Register</button>
+            </form>
+        </nav>
+    </div>
+</section>
+{% endblock %}
